@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  width: 300px; /* Changed from fixed 300px to percentage for responsive layout */
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-profile {
+  text-align: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+}
+
+.sidebar-menu li {
+  padding: 15px 0;
+  cursor: pointer;
+  color: #888;
+}
+
+.sidebar-menu li.active {
+  color: #3a86ff;
+  font-weight: bold;
+}
+
+.add-project-btn {
+  background-color: #3a86ff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1; /* This makes the main content take the rest of the space */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 300px;
+  background-color: #f1f1f1;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 10px;
+}
+
+/* Graph Section */
+.graph-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  gap: 20px;
+  justify-content: space-between; /* Ensures space between charts */
+  margin-top: 20px;
+}
+
+/* Individual Graph Styles */
+.chart-container {
+  flex: 1 1 48%; /* Ensures two charts sit side by side and take 48% width */
+  min-width: 300px; /* Set a minimum width for smaller screens */
+  height: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust Chart Titles */
+.chart-container h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* Adjusted card width for full-screen view */
+.dashboard-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 32%; /* Adjusted to fit 3 cards in full width with space */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3, .stat-card p, .stat-card span {
+  color: #fff;
+}
+
+.purple {
+  background-color: #a4508b;
+}
+
+.blue {
+  background-color: #3a86ff;
+}
+
+.orange {
+  background-color: #ff6b6b;
+}
+
+/* Table */
+.data-table {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; /* Adds some space below the table */
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th, td {
+  padding: 12px 15px; /* More balanced padding */
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s; /* Smooth background transition on hover */
+}
+
+th {
+  text-align: left;
+  font-weight: 600; /* Bold text for headers */
+  color: #333; /* Darker text color for better readability */
+}
+
+td {
+  text-align: left;
+  color: #555; /* Lighter text color for table data */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.pending {
+  color: #ff6b6b; /* Color for pending status */
+}
+
+.approved {
+  color: #4caf50; /* Color for approved status */
+}
+
+.rejected {
+  color: #ff0000; /* Color for rejected status */
+}
+
+/* Button styling */
+.validate-btn {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.validate-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
